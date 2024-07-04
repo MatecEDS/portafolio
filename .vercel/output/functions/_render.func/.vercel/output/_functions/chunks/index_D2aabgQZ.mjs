@@ -2,7 +2,7 @@
 import { k as createComponent, l as renderTemplate, p as renderComponent, m as maybeRenderHead } from './astro/server_L_5f19uS.mjs';
 import 'kleur/colors';
 import 'html-escaper';
-import { $ as $$Layout } from './Layout_Bm4TNK2S.mjs';
+import { $ as $$Layout } from './Layout_DCJd5EKY.mjs';
 /* empty css                         */
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
