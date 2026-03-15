@@ -1,39 +1,92 @@
 ---
 import '@fontsource/onest/500.css';
 import '@fontsource/orbitron/500.css';
-import PillButton from './footer_button.astro';
 ---
 
-<footer>
-    <div class="flex-col px-10 justify-around">
-        <div class="flex justify-center">
-            <img src="../logo.svg" class="w-10">
-        </div>
-        <nav class="flex gap-x-4 md:gap-10 transition text-1xl justify-center items-center py-4">
-            <PillButton href="https://www.linkedin.com/in/antonio-trujillo-b43691315/" target="_blank">Linkedin</PillButton>
-            <PillButton href="https://www.instagram.com/tony.22tr/" target="_blank">Instagram</PillButton>
-            <PillButton href="mailto:tony.trujillo.2210@gmail.com" target="_blank">Contacto</a>
-        </nav>
+<footer class="snap-start bg-[#0B0B0B]/20 border-t border-[#00FF66]/20 mt-24">
+
+  <div class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+
+    <!-- Logo + Marca -->
+    <div class="flex flex-col items-center gap-6">
+
+      <div class="flex items-center gap-4">
+        <img src="/logo.svg" class="w-10" alt="RPTR Tech Logo" />
+        <span class="font-['Orbitron'] tracking-widest text-white text-lg">
+          RPTR <span class="text-[#00FF66]">TECH</span>
+        </span>
+      </div>
+
+      <div class="flex flex-col items-center text-center mt-8 space-y-2">
+
+        <span class="text-gray-400 text-xs uppercase tracking-widest">
+          Contacto Directo
+        </span>
+
+        <a href="mailto:tony.trujillo.2210@gmail.com"
+          class="text-[#00FF66] hover:underline text-sm">
+          tony.trujillo.2210@gmail.com
+        </a>
+
+        <span class="text-gray-500 text-sm">
+          +52 56 34 55 18 80
+        </span>
+
+        <span class="text-gray-500 text-sm">
+          Ciudad de México · México
+        </span>
+
+      </div>
+
+      <!-- Redes -->
+      <nav class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm uppercase tracking-widest">
+
+        <a href="https://www.linkedin.com/in/antonio-trujillo-b43691315/" 
+           target="_blank"
+           class="border border-[#00FF66] px-6 py-2 text-[#00FF66]
+                  hover:bg-[#00FF66] hover:text-black
+                  transition duration-300">
+          LinkedIn
+        </a>
+
+        <a href="https://www.instagram.com/rptr_666/" 
+           target="_blank"
+           class="border border-[#00FF66] px-6 py-2 text-[#00FF66]
+                  hover:bg-[#00FF66] hover:text-black
+                  transition duration-300">
+          Instagram
+        </a>
+
+        
+        <a href="https://www.tiktok.com/@rptr666" 
+           target="_blank"
+           class="border border-[#00FF66] px-6 py-2 text-[#00FF66]
+                  hover:bg-[#00FF66] hover:text-black
+                  transition duration-300">
+          TikTok
+        </a>
+
+      </nav>
+
     </div>
-    <div class="flex justify-center items-center">
-        <img src="../favicon.svg" class="w-10">
-        <h1>Pagina realizada con Astro.</h1>
+
+  </div>
+
+  <!-- Línea inferior técnica -->
+  <div class="border-t border-[#00FF66]/10 py-6">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row 
+                items-center justify-between text-xs text-gray-500">
+
+      <div class="flex items-center gap-3">
+        <img src="/favicon.svg" class="w-6 opacity-70" alt="RPTR Icon" />
+        <span>Desarrollado con Astro · RPTR Tech</span>
+      </div>
+
+      <span class="mt-4 md:mt-0">
+        © 2026 RPTR Tech.
+      </span>
+
     </div>
+  </div>
+
 </footer>
-
-
-<style>
-	footer {
-		font-family: 'onest', sans-serif;
-        background-color: rgba(11,11,11, 0.9);
-        color: #26ff00;
-	}
-    a {
-        font-size: 15px;
-    }
-    h1 {
-        font-family: 'orbitron', sans-serif;
-    }
-</style>
-
-

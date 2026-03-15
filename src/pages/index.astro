@@ -1,102 +1,795 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '@fontsource-variable/montserrat';
+import BasePage from '../layouts/PageBase.astro';
+import { Flutter, React, Babylondotjs, Unity, Django, Fastapi, Nodedotjs, Rust,  Ubuntu, Nginx, Cloudflare, Docker, Mural, Figma, Notion, Arduino, Micropython, Esphome, Raspberrypi, Dassaultsystemes, Blender} from 'simple-icons-astro';
 ---
 
-<Layout title="Antonio Trujillo">
-	<main>
-		<section class="intro justify-center flex ">
-			<div class="py-10 px-5">
-				<h1 class="text-6xl sm:text-7xl md:text-8xl py-10">
-					Creando Soluciones tecnologícas para la vida cotidiana
-				</h1>
-				<div>
-					<h2 class="text-5xl ">Antonio Trujillo</h1>
-					<h3 class="text-3xl">Arquitecto de Soluciones tecnologícas</h3>
+<BasePage title="inicio">
+
+	<section class="snap-start video relative min-h-[60svh] max-w-[100sdw] flex items-center justify-center text-center">
+		<video
+			class="absolute inset-0 w-full h-full object-cover -z-20 blur-[10px] "
+			autoplay
+			muted
+			loop
+			playsinline
+		>
+			<source src="/hero.mp4" type="video/mp4" />
+		</video>
+
+		<div class="max-w-5xl px-2 ">
+
+			<h1 class="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
+			Laboratorio de Tecnologia avanzada
+			</h1>
+
+			<p class="mt-8 text-2xl md:text-4xl text-gray-200 max-w-3xl mx-auto py-8">
+			Calidad, Innovacion y Rendimiento.
+			</p>
+
+			<div class="mt-4">
+				<a href="/antonio.pdf" target="_blank"
+				class="inline-block border border-[#00FF66] px-10 py-4 
+						text-[#00FF66] uppercase tracking-widest text-sm
+						hover:bg-[#00FF66] hover:text-black
+						transition duration-300">
+					Descargar CV
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="snap-start py-24 px-6 overflow-hidden bg-[#474747]/20">
+		<div class="max-w-6xl mx-auto text-center">
+
+			<h2 class="text-4xl md:text-5xl">
+			Principios de Ingeniería RPTR
+			</h2>
+			<p class="text-gray-400 max-w-3xl mx-auto mb-5">
+			Esta es la base de todos nuestros proyectos.
+			</p>
+
+			<div class="grid md:grid-cols-3 gap-10">
+
+			<div class="principio border border-[#00FF66]/20 p-10 rounded-xl hover:border-[#00FF66]/50 transition duration-300">
+				<h3 class="text-[#00FF66] text-xl mb-4">Arquitectura</h3>
+				<p class="text-gray-400">
+				Cada sistema se diseña desde su estructura base antes de escribir una sola línea de código.
+				</p>
+			</div>
+
+			<div class="principio border border-[#00FF66]/20 p-10 rounded-xl bg-[#141414/20] hover:border-[#00FF66]/50 transition duration-300">
+				<h3 class="text-[#00FF66] text-xl mb-4">Simplicidad</h3>
+				<p class="text-gray-400">
+				Tenemos preferencia por arquitecturas simples, pero robustas y utiles.
+				</p>
+			</div>
+
+			<div class="principio border border-[#00FF66]/20 p-10 rounded-xl bg-[#141414/20]  hover:border-[#00FF66]/50 transition duration-300">
+				<h3 class="text-[#00FF66] text-xl mb-4">Rendimiento</h3>
+				<p class="text-gray-400">
+				Optimización constante enfocada en eficiencia, velocidad y estabilidad.
+				</p>
+			</div>
+
+			<div class="principio border border-[#00FF66]/20 p-10 rounded-xl bg-[#141414/20]  hover:border-[#00FF66]/50 transition duration-300">
+				<h3 class="text-[#00FF66] text-xl mb-4">Accesibilidad</h3>
+				<p class="text-gray-400">
+				Toda tecnologia debe ser incluyente sin importar las condiciones.
+				</p>
+			</div>
+
+			<div class="principio border border-[#00FF66]/20 p-10 rounded-xl bg-[#141414/20] hover:border-[#00FF66]/50 transition duration-300">
+				<h3 class="text-[#00FF66] text-xl mb-4">Escalabilidad</h3>
+				<p class="text-gray-400">
+					Diseñamos sistemas preparados para crecer con facilidad.
+				</p>
+				</div>
+
+				<div class="principio border border-[#00FF66]/20 p-10 rounded-xl bg-[#141414/20] hover:border-[#00FF66]/50 transition duration-300">
+				<h3 class="text-[#00FF66] text-xl mb-4">Seguridad</h3>
+				<p class="text-gray-400">
+					Implementamos buenas prácticas para proteger datos y procesos.
+				</p>
+			</div>
+		</div>
+
+	</section>
+
+	<section id="proyectos" class="snap-start py-24 px-6">
+		<div class="max-w-7xl mx-auto text-center mb-5">
+			<h2 class="text-4xl md:text-5xl">Proyectos Recientes</h2>
+			<p class="text-gray-400 max-w-3xl mx-auto">
+			Sistemas desarrollados durante 2025-2026
+			</p>
+		</div>
+
+		<div class="slider flex w-full overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth px-6">
+
+			<!-- EFI -->
+			<div class="proyecto flex-shrink-0 snap-center border border-[#00FF66]/20 p-10 mx-10 rounded-xl bg-[#141414] hover:border-[#00FF66]/50 transition duration-300">
+
+				<h3 class="text-[#00FF66] text-xl mb-4">EFI</h3>
+
+				<p class="text-gray-400 mb-6">
+					2024 - actualidad
+				</p>
+
+				<p class="text-gray-400 mb-6">
+					Sistema de gestión escolar enfocado en educacion, comunicacion y administración eficiente de procesos internos.
+				</p>
+
+				<ul class="text-gray-500 text-sm space-y-2">
+					<li>• Arquitectura modular</li>
+					<li>• FrontEnd multiplataforma</li>
+					<li>• Backend estructurado</li>
+					<li>• Optimización de rendimiento</li>
+					<li>• Diseño orientado a escalabilidad</li>
+				</ul>
+
+			</div>
+
+			<div class="proyecto flex-shrink-0 snap-center border border-[#00FF66]/20 p-10 mx-10 rounded-xl bg-[#141414] hover:border-[#00FF66]/50 transition duration-300">
+
+				<h3 class="text-[#00FF66] text-xl mb-4">Combat Simulator</h3>
+
+				<p class="text-gray-400 mb-6">
+					Actualidad
+				</p>
+
+				<p class="text-gray-400 mb-6">
+					Prototipo de shooter tactico hardcore.
+				</p>
+
+				<ul class="text-gray-500 text-sm space-y-2">
+					<li>• Animacion procedural</li>
+					<li>• Scripting</li>
+					<li>• Programacion orientada a objetos</li>
+				</ul>
+
+			</div>
+
+			<div class="proyecto flex-shrink-0 snap-center border border-[#00FF66]/20 p-10 mx-36 rounded-xl bg-[#141414] hover:border-[#00FF66]/50 transition duration-300">
+
+				<h3 class="text-[#00FF66] text-xl mb-4">Plane Viewer</h3>
+
+				<p class="text-gray-400 mb-6">
+					2026
+				</p>
+
+				<p class="text-gray-400 mb-6">
+					Sistema de visualización y administracion de ventas de terrenos, 
+					mediante un visor 3D y paneles de administracion.
+				</p>
+
+				<ul class="text-gray-500 text-sm space-y-2">
+					<li>• Visualización interactiva</li>
+					<li>• Gestión de datos en tiempo real</li>
+					<li>• Diseño orientado a experiencia técnica</li>
+					<li>• Optimización para rendimiento continuo</li>
+				</ul>
+
+			</div>
+
+			<!-- ARBIX -->
+			<div class="proyecto flex-shrink-0 snap-center border border-[#00FF66]/20 p-10 mx-10 rounded-xl bg-[#141414] hover:border-[#00FF66]/50 transition duration-300">
+
+			<h3 class="text-[#00FF66] text-xl mb-4">ARBIX</h3>
+
+			<p class="text-gray-400 mb-6">
+				2025
+			</p>
+
+			<p class="text-gray-400 mb-6">
+				Protoripo de plataforma para el analisis y arbitraje de partidos de futbol.
+			</p>
+
+			<ul class="text-gray-500 text-sm space-y-2">
+				<li>• Integración de múltiples tecnologías</li>
+				<li>• Procesamiento lógico avanzado</li>
+				<li>• Diseño de interfaz minimalista</li>
+				<li>• Implementación optimizada</li>
+				<li>• Implementación de IA</li>
+			</ul>
+
+			</div>
+		</div>
+		
+	</section>
+
+	<section id="sistemas" class="snap-start  py-24 px-6">
+
+		<div class="max-w-7xl mx-auto">
+
+			<!-- Título -->
+			<div class="text-center mb-5">
+				<h2 class="text-4xl md:text-5xl tracking-wide">
+					Especialidades
+				</h2>
+				<p class="text-gray-400 max-w-3xl mx-auto">
+					RPTR Tech se especializa en
+				</p>
+			</div>
+
+			<!-- Grid -->
+			<div class="grid md:grid-cols-3 gap-10">
+
+			<!-- Módulo 1 -->
+			<div class="group border border-[#00FF66]/20 rounded-2xl p-10 bg-[#141414/20] hover:border-[#00FF66]/60 transition duration-500">
+
+				<h3 class="text-2xl mb-6 text-[#00FF66]">
+				Desarrollo de Sistemas
+				</h3>
+
+				<p class="text-gray-400 mb-6">
+				Construcción de aplicaciones y arquitecturas distribuidas
+				para entornos web, móviles y de escritorio.
+				</p>
+
+				<ul class="space-y-2 text-gray-300">
+				<li>Flutter / Dart</li>
+				<li>React / JavaScript</li>
+				<li>Java / Android</li>
+				<li>Python / Django</li>
+				</ul>
+			</div>
+
+			<!-- Módulo 2 -->
+			<div class="group border border-[#00FF66]/20 rounded-2xl p-10 bg-[#141414/20] hover:border-[#00FF66]/60 transition duration-500">
+
+				<h3 class="text-2xl mb-6 text-[#00FF66]">
+				Arquitectura y Gestión Técnica
+				</h3>
+
+				<p class="text-gray-400 mb-6">
+				Diseño estructural de software, modelado de procesos
+				y coordinación de ciclos de desarrollo.
+				</p>
+
+				<ul class="space-y-2 text-gray-300">
+				<li>Arquitectura de Software</li>
+				<li>Scrum / DevOps</li>
+				<li>BPMN</li>
+				<li>Figma / Prototipado</li>
+				</ul>
+			</div>
+
+			<!-- Módulo 3 -->
+			<div class="group border border-[#00FF66]/20 rounded-2xl p-10 bg-[#141414/20] hover:border-[#00FF66]/60 transition duration-500">
+
+				<h3 class="text-2xl mb-6 text-[#00FF66]">
+				IoT y Sistemas Embebidos
+				</h3>
+
+				<p class="text-gray-400 mb-6">
+				Desarrollo de soluciones físicas-digitales mediante
+				microcontroladores y diseño mecánico.
+				</p>
+
+				<ul class="space-y-2 text-gray-300">
+				<li>ESP32 / MicroPython</li>
+				<li>Raspberry Pi</li>
+				<li>Arduino</li>
+				<li>SolidWorks / Inventor</li>
+				</ul>
+			</div>
+
+			</div>
+		</div>
+
+	</section>
+
+	<section id="tecnologias" class="snap-start relative py-24 px-6 max-w-7xl mx-auto">
+		<!-- Título -->
+		<div class="text-center mb-5">
+			<h2 class="text-4xl md:text-5xl tracking-wide">
+				Stacks Tecnologicos
+			</h2>
+			<p class="text-gray-400 max-w-3xl mx-auto">
+				Stacks que usamos en proyectos (Combinamos stacks para crear proyectos mas robustos)
+			</p>
+		</div>
+
+		<div class="slider flex max-w-6xl mx-auto h-[80svh] overflow-y-show overflow-x-auto snap-x snap-mandatory scroll-smooth">
+
+			<!-- Desarollo web -->
+			<div class="stack flex-shrink-0 snap-center w-[85%] md:w-[70%] 
+            border border-[#00FF66]/20 p-12 mx-10 rounded-2xl 
+            bg-[#141414] hover:border-[#00FF66]/50 
+            transition duration-300flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+  				<!-- Info principal -->
+				<div class="flex-1">
+					<h3 class="text-[#00FF66] text-2xl mb-4 tracking-wide">
+					Desarrollo Web & Apps
+					</h3>
+
+					<p class="text-gray-400 mb-8 leading-relaxed">
+					Diseño y construcción de aplicaciones web, de escritorio y movil modernas, responsivas y optimizadas.
+					</p>
+
+					<ul class="text-gray-500 text-sm space-y-3">
+					<li>• Aplicaciones multiplataforma</li>
+					<li>• Arquitectura modular</li>
+					<li>• Diseño responsive y optimización</li>
+					<li>• Integración con APIs y servicios externos</li>
+					</ul>
+				</div>
+
+				<!-- Stack tecnológico -->
+				<div class="grid grid-cols-3 gap-4 flex-1">
+
+					<div class="tech-card">
+						<Flutter class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Dart · Flutter</p>
+					</div>
+
+					<div class="tech-card">
+						<React class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">TypeScript · React</p>
+					</div>
+
+					<div class="tech-card">
+						<img src="/favicon.svg" class="w-6 h-6 mb-6 text-[#00FF66] color-[#00FF66]" />
+						<p class="text-sm text-gray-400">TypeScript · Astro</p>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="stack flex-shrink-0 snap-center w-[85%] md:w-[70%] 
+            border border-[#00FF66]/20 p-12 mx-10 rounded-2xl 
+            bg-[#141414] hover:border-[#00FF66]/50 
+            transition duration-300 flex flex-col lg:flex-row gap-10 lg:gap-166">
+
+  				<!-- Info principal -->
+				<div class="flex-1">
+					<h3 class="text-[#00FF66] text-2xl mb-4 tracking-wide">
+					Aplicaciones 3D
+					</h3>
+
+					<p class="text-gray-400 mb-8 leading-relaxed">
+					Diseño y construcción de aplicaciones web 3D, para multiples usos.
+					</p>
+
+					<ul class="text-gray-500 text-sm space-y-3">
+					<li>• Aplicaciones WebApp</li>
+					<li>• Juegos</li>
+					<li>• Animaciones procedurales</li>
+					<li>• Optimización</li>
+					</ul>
+				</div>
+
+				<!-- Stack tecnológico -->
+				<div class="grid grid-cols-2 gap-8 flex-1">
+
+					<div class="tech-card">
+						<Unity class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">C++/C# · Unity</p>
+					</div>
+
+					<div class="tech-card">
+						<Babylondotjs class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">TypeScript · Babylon.Js</p>
+					</div>
 				</div>
 			</div>
-		</section>
-		<section class="justify-center flex">
-			<a download href="Antonio_Trujillo.pdf" class="bg-[#00ff00] rounded-full flex justify-center items-center
-				y-2 px-5 text-nowrap md:min-w-36 bg-green hover:scale-125 hover:bg-[#00ff00]/90 transition">
-				<h5 class="px-10 py-10 text-black text-3xl">
-					Descargar CV
-				</h5>
-			</a>
-		</section>
-		<section class="px-10 py-10">
-			<div class="rounded-2xl border border-[#00ff00] py-10">
-				<div class="intro px-5 py-5">
-					<h2 class="flex-col justify-center  text-4xl">
-						Stack tecnologíco
-					</h2>
+
+			<div class="stack flex-shrink-0 snap-center w-[85%] md:w-[70%] 
+            border border-[#00FF66]/20 p-12 mx-10 rounded-2xl 
+            bg-[#141414] hover:border-[#00FF66]/50 
+            transition duration-300 flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+  				<!-- Info principal -->
+				<div class="flex-1">
+					<h3 class="text-[#00FF66] text-2xl mb-4 tracking-wide">
+					Servidores
+					</h3>
+
+					<p class="text-gray-400 mb-8 leading-relaxed">
+					Diseño y contruccion de servidores para servicios con enfoque en Seguridad, Rapidez y escalabilidad.
+					</p>
+
+					<ul class="text-gray-500 text-sm space-y-3">
+					<li>• Servidores Linux</li>
+					<li>• Servidores REST</li>
+					<li>• Servidores WebSocket</li>
+					<li>• Bases de datos</li>
+					</ul>
 				</div>
-				<div class="flex-1 sm:flex justify-around">
-					<div class="py-5 px-5 text-center">
-						<h1 class="text-2xl">
-							Desarrollo fullstack
-						</h1>
-						<h4>
-							(mobile, escritorio y web)
-						</h4>
-						<ul>
-							<li>Dart/Flutter</li>
-							<li>JavaScript/React</li>
-							<li>Java/Android SDK</li>
-							<li>Java/Swing/awt</li>
-							<li>Python/TKinter</li>
-							<li>Python/Django</li>
-							<li>HTML/CSS/JavaScript</li>
-						</ul>
+
+				<!-- Stack tecnológico -->
+				<div class="grid grid-cols-2 gap-8 flex-1">
+
+					<div class="tech-card">
+						<Django class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Python · Django</p>
 					</div>
-		
-				
-					<div class="py-5 px-5 text-center">
-						<h1 class="text-2xl">
-							Ingenieria de Software
-						</h1>
-						<h4>
-							(Arquitectura de Software, Gestion de proyectos)
-						</h4>
-						<ul>
-							<li>Mural</li>
-							<li>Notion</li>
-							<li>Scrum</li>
-							<li>DevOps</li>
-							<li>BPMN</li>
-							<li>Figma</li>
-						</ul>
+
+					<div class="tech-card">
+						<Fastapi class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Python · FastApi</p>
 					</div>
-		
-					<div class="py-5 px-5 text-center">
-						<h1 class="text-2xl">
-							Desarrollo IoT
-						</h1>
-						<h4>
-							(Diseño 3D, microcontroladores)
-						</h4>
-						<ul>
-							<li>SolidWorks 2022-2023</li>
-							<li>AutoDesk Inventor</li>
-							<li>Ultimaker Cura</li>
-							<li>RaspBerry PI 4/Python</li>
-							<li>RaspBerry PI Pico/MicroPython </li>
-							<li>esp32/MicroPython</li>
-							<li>Arduino uno/C</li>
-						</ul>
+
+					<div class="tech-card">
+						<Nodedotjs class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">JS · Node.Js</p>
+					</div>
+
+					<div class="tech-card">
+						<Rust class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Rust</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="stack flex-shrink-0 snap-center w-[85%] md:w-[70%] 
+            border border-[#00FF66]/20 p-12 mx-10 rounded-2xl 
+            bg-[#141414] hover:border-[#00FF66]/50 
+            transition duration-300 flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+  				<!-- Info principal -->
+				<div class="flex-1">
+					<h3 class="text-[#00FF66] text-2xl mb-4 tracking-wide">
+					DevOps
+					</h3>
+
+					<p class="text-gray-400 mb-8 leading-relaxed">
+					Despliegue de servidores, automatizacion, configuracion de servidores linux, configuracion de ambientes de produccion, desarollo y pruebas.
+					</p>
+
+					<ul class="text-gray-500 text-sm space-y-3">
+					<li>• Contruccion de aplicaciones para despliegue.</li>
+					<li>• Automatizacion de tareas.</li>
+					<li>• Exposicion a internet</li>
+					</ul>
+				</div>
+
+				<!-- Stack tecnológico -->
+				<div class="grid grid-cols-3 gap-8 flex-1">
+
+					<div class="tech-card">
+						<Nginx class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Nginx</p>
+					</div>
+
+					<div class="tech-card">
+						<Ubuntu class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Ubuntu</p>
+					</div>
+
+					<div class="tech-card">
+						<Cloudflare class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Cloudflare</p>
+					</div>
+
+					<div class="tech-card">
+						<Docker class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Docker</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="stack flex-shrink-0 snap-center w-[85%] md:w-[70%] 
+            border border-[#00FF66]/20 p-12 mx-10 rounded-2xl 
+            bg-[#141414] hover:border-[#00FF66]/50 
+            transition duration-300 flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+  				<!-- Info principal -->
+				<div class="flex-1">
+					<h3 class="text-[#00FF66] text-2xl mb-4 tracking-wide">
+					Arquitectura y planeacion
+					</h3>
+
+					<p class="text-gray-400 mb-8 leading-relaxed">
+					Diseño de interfaces UI/UX, Diseño de arquitectura de sistemas para plataformas complejas y Diseño de planes de trabajo. 
+					</p>
+
+					<ul class="text-gray-500 text-sm space-y-3">
+					<li>• Prototipado UI/UX limpio, responsivo y orientado a experiencia de usuario.</li>
+					<li>• Modelado de arquitectura.</li>
+					<li>• Planeación estratégica y Fases de desarrollo.</li>
+					</ul>
+				</div>
+
+				<!-- Stack tecnológico -->
+				<div class="grid grid-cols-3 gap-8 flex-1">
+
+					<div class="tech-card">
+						<Mural class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Mural</p>
+					</div>
+
+					<div class="tech-card">
+						<Notion class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Notion</p>
+					</div>
+
+					<div class="tech-card">
+						<Figma class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Figma</p>
 					</div>
 
 				</div>
 			</div>
-		</section>	
-	</main>
+
+			<div class="stack flex-shrink-0 snap-center w-[85%] md:w-[70%] 
+            border border-[#00FF66]/20 p-12 mx-10 rounded-2xl 
+            bg-[#141414] hover:border-[#00FF66]/50 
+            transition duration-300 flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+  				<!-- Info principal -->
+				<div class="flex-1">
+					<h3 class="text-[#00FF66] text-2xl mb-4 tracking-wide">
+					IOT
+					</h3>
+
+					<p class="text-gray-400 mb-8 leading-relaxed">
+					Diseño y desarrollo de sistemas IoT y programación embebida para dispositivos de bajo consumo.
+					</p>
+
+					<ul class="text-gray-500 text-sm space-y-3">
+					<li>• Programación en C y MicroPython para microcontroladores.</li>
+					<li>• Integración con sensores, comunicación serial y protocolos inalámbricos.</li>
+					</ul>
+				</div>
+
+				<!-- Stack tecnológico -->
+				<div class="grid grid-cols-3 gap-8 flex-1">
+
+					<div class="tech-card">
+						<Micropython class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">MicroPython</p>
+					</div>
+
+					<div class="tech-card">
+						<Esphome class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Esp32</p>
+					</div>
+
+					<div class="tech-card">
+						<Raspberrypi class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Raspberry pi pico/4/5</p>
+					</div>
+
+					<div class="tech-card">
+						<Arduino class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Arduino</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="stack flex-shrink-0 snap-center w-[85%] md:w-[70%] 
+            border border-[#00FF66]/20 p-12 mx-10 rounded-2xl 
+            bg-[#141414] hover:border-[#00FF66]/50 
+            transition duration-300 flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+  				<!-- Info principal -->
+				<div class="flex-1">
+					<h3 class="text-[#00FF66] text-2xl mb-4 tracking-wide">
+					Modelado 3D e Impresion 3D
+					</h3>
+
+					<p class="text-gray-400 mb-8 leading-relaxed">
+					Modelado de piezas o componentes plasticos para proyectos fisicos.
+					</p>
+
+					<ul class="text-gray-500 text-sm space-y-3">
+					<li>• Modelado 3D para piezas funcionales y prototipos técnicos.</li>
+					<li>• Preparación de modelos para impresión (slicing y optimización).</li>
+					<li>• Configuración de parámetros de impresión y calibración.</li>
+					<li>• Iteración diseño–fabricación para validación física.</li>
+					</ul>
+				</div>
+
+				<!-- Stack tecnológico -->
+				<div class="grid grid-cols-3 gap-8 flex-1">
+
+					<div class="tech-card">
+						<Dassaultsystemes class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">solidworks</p>
+					</div>
+
+					<div class="tech-card">
+						<Blender class="w-6 h-6 mb-6 text-[#00FF66]" />
+						<p class="text-sm text-gray-400">Blender</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
 
 <style>
-	section{
-		background-color: rgba(11, 11, 11, 0.9);
+
+	/* Webkit (Chrome, Edge, Safari) */
+	::-webkit-scrollbar {
+	width: 10px;
 	}
+
+	::-webkit-scrollbar-track {
+		background: #0b0b0b;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: linear-gradient(
+			180deg,
+			#00FF66 0%,
+			#00cc55 100%
+		);
+		border-radius: 20px;
+		border: 2px solid #0b0b0b;
+		transition: all 0.3s ease;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #00FF66;
+	}
+
+	/* Firefox */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: #00FF66 #0b0b0b;
+	}
+
+	html {
+		scroll-snap-type: y mandatory;
+		scroll-behavior: smooth;
+	}
+
 	.intro{
 		text-align: center;
 	}
+
+	section {
+		background-color: rgba(32, 32, 32, 0.1);
+		border-bottom: 1px solid rgba(0, 255, 102, 0);
+		min-height: 100svh;
+		max-width: 100svw;
+	}
+
+	.principio {
+		opacity: 0;
+		height: 30svh;
+		align-content: center;
+		transform: translateY(40px);
+		transition: all 0.8s ease;
+	}
+
+	.principio.visible {
+		opacity: 1;
+		background-color: rgba(8, 8, 8, 0.2);
+		transform: translateY(0);
+	}
+
+	.group {
+		opacity: 0;
+		align-content: center;
+		transform: translateY(40px);
+		transition: all 0.8s ease;
+	}
+
+	.group.visible {
+		opacity: 1;
+		background-color: rgba(8, 8, 8, 0.2);
+		transform: translateY(0);
+	}
+
+	.proyecto{
+		width: 80dvw;
+		height: 65svh;
+		align-content: center;
+		background-color: rgba(8, 8, 8, 0.2);
+	}
+
+	.stack {
+		flex: 0 0 70%;
+		max-width: 1100px;
+		margin-right: 20px;
+		min-height: 60svh;
+		padding: 2rem;
+		background: rgba(15,15,15,0.6);
+		border-radius: 24px;
+		backdrop-filter: blur(10px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		transition: all 0.4s ease;
+	}
+
+	@media (min-width: 768px) {
+		.stack {
+			flex: 0 0 75%;
+			padding: 4rem;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.stack {
+			flex: 0 0 65%;
+		}
+	}
+	.tech-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 </style>
+
+<script>
+  const items = document.querySelectorAll('.principio');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        const delay = Array.from(items).indexOf(element) * 150;
+        setTimeout(() => {
+          element.classList.add('visible');
+        }, delay);
+        observer.unobserve(element);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  items.forEach(item => observer.observe(item));
+</script>
+
+<script>
+  const items = document.querySelectorAll('.group');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        const delay = Array.from(items).indexOf(element) * 150;
+        setTimeout(() => {
+          element.classList.add('visible');
+        }, delay);
+        observer.unobserve(element);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  items.forEach(item => observer.observe(item));
+</script>
+
+<script>
+  function generateBlob() {
+    const points = 8;
+    const radius = 250;
+    const center = 300;
+
+    let path = "";
+
+    for (let i = 0; i < points; i++) {
+      const angle = (Math.PI * 2 * i) / points;
+      const randomRadius = radius + (Math.random() * 120 - 60);
+      const x = center + randomRadius * Math.cos(angle);
+      const y = center + randomRadius * Math.sin(angle);
+
+      path += `${i === 0 ? "M" : "L"} ${x} ${y} `;
+    }
+
+    path += "Z";
+    return path;
+  }
+
+  const container = document.getElementById("bg-shape");
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 600 600");
+  svg.classList.add("w-[800px]", "h-[800px]", "opacity-20", "blur-3xl");
+
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", generateBlob());
+  path.setAttribute("fill", "#00FF66");
+
+  svg.appendChild(path);
+  container!.appendChild(svg);
+</script>
+

@@ -1,69 +1,223 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import PageBase from '../layouts/PageBase.astro';
+import { Cpu, Code2, Wrench, Shield } from "lucide-astro";
 ---
 
-<Layout title="Sobre mi">
-	<main>
-		<section class="w-full mx-auto px-36 py-20">
-			
-			<div class="justify-center flex">
-				<h1 class="text-5xl flex-nowrap">
-					Sobre mi
-				</h1>
+<PageBase title="Sobre mí">
+
+	<section class="mx-auto px-6 md:px-20 mt-24 ">
+
+		<!-- Título -->
+		
+		<div class="text-center mb-10">
+			<h1 class="text-5xl md:text-6xl text-[#00FF66] tracking-widest">
+				SOBRE MÍ
+			</h1>
+		</div>
+		
+		<!-- Bloque principal -->
+		<div class="block grid md:grid-cols-2 gap-3 flex-shrink-0 snap-center border border-[#00FF66]/20 p-10 mx-10 rounded-xl bg-[#141414/60] hover:border-[#00FF66]/50 transition duration-300">
+
+			<!-- Imagen -->
+			<div class="flex grid md:grid-cols-2 justify-center align-center">
+
+				<div class="mb-5 flex-shrink-0 justify-center align-center">
+					<p class="text-gray-200 w-5xl mx-auto">
+						Antonio Trujillo
+					</p>
+					<p class="text-gray-500 w-2xl mx-auto">
+						Arquitecto de software
+					</p>
+
+					<br><br>
+
+					<p class="text-gray-500 w-2xl mx-auto">
+						Facultad de ingenieria, Universidad Nacional Autonoma de Mexico
+					</p>
+				
+					<p class="text-gray-500 w-2xl mx-auto">
+						2020-2026
+					</p>
+
+					
+
+					<br><br>
+
+					<p class="text-gray-500 w-2xl mx-auto">
+						23 Años.
+					</p>
+				
+					<p class="text-gray-500 w-2xl mx-auto">
+						+52 5634551880
+					</p>
+				
+					<p class="text-gray-500 w-2xl mx-auto">tony.trujillo.2210@gmail.com</p>
+					</p>
+				
+					<p class="text-gray-500 w-2xl mx-auto">
+						Alvaro Obregon, CDMX.
+					</p>
+				</div>
+
+				<img 
+					src="../foto.jpg" 
+					class="w-35 md:w-70 rounded-2xl border border-[#00FF66]/20 shadow-xl transition duration-500 hover:border-[#00FF66]/60 bg-[#141414/20]"
+				/>
 			</div>
 
-
-			<div class="flex-1 md:flex justify-between items-center">	
-				<div class="px-20 justify-center flex py-5">
-					<img src="../foto.jpeg" class="min-h-40 min-w-32 max-h-96 max-w-64"> 
-				</div>
-				<div class=" sm:max-w-[70%]">
-					<p>
-						¡Hola! Soy Antonio, tengo 21 años y estudio Ingeniería en Computación en la Facultad de Ingeniería de la UNAM. 
-						A los 10 años empecé en el mundo de las computadoras armando y dandole mantenimiento a computadoras. Desde 
-						entonces, he evolucionado hacia el desarrollo de software, destacándome con dos programas en Java durante la 
-						preparatoria.
-					</p>
-					<p>
-						En la universidad, he sido mentor de compañeros en proyectos y actividades académicas, y he sido parte
-						integral de la asociación estudiantil Baja SAE UNAM, donde he diseñado un sistema para telemetria e imparti  
-						cursos de programación para principiantes. Actualmente lidero un proyecto que busca impulsar las capacidades
-						tecnológicas de nuestra facultad.
-					</p>
-				</div>
-			</div>
-			<div>
+			<!-- Texto -->
+			<div class="space-y-8 text-gray-400 leading-8 max-w-xl">
 				<p>
-					Actualmente, mi experiencia abarca programación fullstack de aplicaciones móviles, de escritorio y web. 
-					desarrollo de proyectos IoT, robotica e intrumentacion electronica, cuento con habilidades relacionadas 
-					a project management y DevOps, he incursiondo en el diseño de equipos de cómputo y actualmente estoy 
-					aprendiendo Sobre ciberseguridad para fortalecer aún más mis habilidades técnicas.
+					Soy Antonio, estudiante de Ingeniería en Computación en la Facultad de Ingeniería de la UNAM.
+					Mi trayectoria comenzó a los 10 años ensamblando y dando mantenimiento a equipos de cómputo,
+					evolucionando posteriormente hacia el desarrollo de software.
 				</p>
+
 				<p>
-					Mi meta es seguir creciendo profesionalmente en el campo tecnológico, aportando mi entusiasmo y experiencia
-					para enfrentar nuevos desafíos y contribuir al avance de la tecnología en México.
-				</p>	
+					Dentro del entorno universitario he participado en proyectos de alto nivel técnico,
+					como el desarrollo de sistemas de telemetría para vehículos off-road en Baja SAE UNAM,
+					así como mentorías y cursos de programación orientados a fundamentos y aplicación práctica.
+				</p>
+
+				<p>
+					Mi enfoque profesional se centra en arquitectura de sistemas, integración físico-digital (IoT)
+					y desarrollo fullstack con énfasis en rendimiento, estructura y escalabilidad.
+				</p>
 			</div>
-		</section>
-	</main>
+
+		</div>
+
+		<!-- Capacidades Técnicas -->
+		<div class="space-y-16 mt-16 mx-10">
+
+			<h2 class="text-3xl text-[#00FF66] text-center tracking-wide mb-10">
+				Áreas de Especialización
+			</h2>
+
+			<div class="grid md:grid-cols-4 gap-12">
+
+				<div class="about-card">
+					<Cpu size={28} class="text-[#00FF66]" />
+					<h3>Arquitectura de Sistemas</h3>
+					<p>Diseño estructural de software con enfoque en modularidad y rendimiento.</p>
+				</div>
+
+				<div class="about-card">
+					<Code2 size={28} class="text-[#00FF66]" />
+					<h3>Desarrollo Fullstack</h3>
+					<p>Aplicaciones móviles, web y de escritorio con integración backend.</p>
+				</div>
+
+				<div class="about-card">
+					<Wrench size={28} class="text-[#00FF66]" />
+					<h3>IoT & Electrónica</h3>
+					<p>Microcontroladores, telemetría, firmware y diseño físico-digital.</p>
+				</div>
+
+				<div class="about-card">
+					<Shield size={28} class="text-[#00FF66]" />
+					<h3>Ciberseguridad</h3>
+					<p>Fortalecimiento progresivo en seguridad informática y protección de sistemas.</p>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section class="max-w-6xl mx-auto px-20 md:px-20 py-16 space-y-32">
+
+		<!-- Filosofía -->
+		<div class="text-center max-w-3xl mx-auto space-y-8">
+			<h2 class="text-3xl text-[#00FF66] tracking-wide">
+				Filosofía Profesional
+			</h2>
+
+			<div class="block snap-center border border-[#00FF66]/20 p-10 mx-10 rounded-xl bg-[#141414/60] hover:border-[#00FF66]/50 transition duration-300">
+				<p class="text-gray-400 leading-8">
+					Construir tecnología no es únicamente programar; es diseñar estructuras sólidas,
+					optimizar recursos y anticipar escenarios futuros. Mi objetivo es desarrollar
+					sistemas que no solo funcionen, sino que estén correctamente concebidos desde
+					su arquitectura base.
+				</p>
+			</div>
+		</div>
+	</section>
+
 </Layout>
 
 <style>
-	main{
-		background-color: rgba(11, 11, 11, 0.9);
-	}
-	h1 {
-		color: #00ff00;
-	}
-	h2 {
-		color: #00ff00;
-		font-family: 'onest', sans-serif;
-	}
-	p {
-		color: #00ff00;
-		font-family: 'onest', sans-serif;
-		padding-top: 25px;
-		font-size: 18px;
-	}
+
+.about-card {
+	background: rgba(14, 14, 14, 0.5);
+	border: 1px solid rgba(0,255,102,0.15);
+	padding: 2rem;
+	border-radius: 1rem;
+	text-align: center;
+	transition: all 0.4s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+
+.block {
+	background: rgba(8, 8, 8, 0.35);
+}
+
+.about-card:hover {
+	border-color: rgba(0,255,102,0.6);
+	transform: translateY(-6px);
+	box-shadow: 0 0 40px rgba(0,255,102,0.08);
+}
+
+.about-card h3 {
+	color: #00FF66;
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+}
+
+.about-card p {
+	color: #9ca3af;
+	font-size: 0.9rem;
+	line-height: 1.6;
+}
 
 </style>
+
+
+<script>
+  function generateBlob() {
+    const points = 8;
+    const radius = 250;
+    const center = 300;
+
+    let path = "";
+
+    for (let i = 0; i < points; i++) {
+      const angle = (Math.PI * 2 * i) / points;
+      const randomRadius = radius + (Math.random() * 120 - 60);
+      const x = center + randomRadius * Math.cos(angle);
+      const y = center + randomRadius * Math.sin(angle);
+
+      path += `${i === 0 ? "M" : "L"} ${x} ${y} `;
+    }
+
+    path += "Z";
+    return path;
+  }
+
+  const container = document.getElementById("bg-shape");
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 600 600");
+  svg.classList.add("w-[800px]", "h-[800px]", "opacity-20", "blur-3xl");
+
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", generateBlob());
+  path.setAttribute("fill", "#00FF66");
+
+  svg.appendChild(path);
+  container!.appendChild(svg);
+</script>

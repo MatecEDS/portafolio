@@ -1,11 +1,16 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 
-import vercel from "@astrojs/vercel/serverless";
-
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  output: "server",
-  adapter: vercel()
+  output: "static",
+  server: {
+    watch: {
+      usePolling: false
+    },
+    host: true,
+    port: 2211,
+    allowedHosts: ["www.rptr.tech", "rptr.tech", "127.0.0.1"],
+  },
 });

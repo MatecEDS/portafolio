@@ -1,35 +1,118 @@
 ---
 import '@fontsource/onest/500.css';
 import '@fontsource/orbitron/500.css';
-import PillButton from './Pill_Button.astro';
 ---
 
-<header>
-    <div class="flex px-10 justify-around">
-        <div class="py-4">
-            <img src="../logo.svg" class="w-10">
-        </div>
-        <nav class="flex gap-x-4 md:gap-10 transition text-1xl justify-center items-center">
-            <PillButton href="/">Inicio</PillButton>
-            <PillButton href="/projects">Proyectos</PillButton>
-            <PillButton href="/about">Sobre mi</PillButton>
-        </nav>
+<header class="fixed top-0 left-0 w-full z-50 bg-transparent">
+
+  <div class="max-w-7xl mx-auto relative flex items-center justify-between px-6 py-4">
+
+    <!-- Botón -->
+    <div class="flex items-center">
+      <button id="menu-btn"
+              class="relative w-8 h-8 flex items-center justify-center">
+        <span class="absolute w-6 h-[2px] bg-[#00FF66] transition-all duration-300 line1 translate-y-[-6px]"></span>
+        <span class="absolute w-6 h-[2px] bg-[#00FF66] transition-all duration-300 line2"></span>
+        <span class="absolute w-6 h-[2px] bg-[#00FF66] transition-all duration-300 line3 translate-y-[6px]"></span>
+      </button>
     </div>
+
+    <!-- Logo centrado -->
+    <div class="flex justify-center items-center gap-4">
+      <img src="/logo.svg" class="w-9" alt="RPTR Tech Logo" />
+      <span class="font-['Orbitron'] text-lg tracking-widest text-white">
+        RPTR <span class="text-[#00FF66]">TECH</span>
+      </span>
+    </div>
+
+    <!-- Espacio vacío -->
+    <div></div>
+
+  </div>
 </header>
+
+<!-- Overlay -->
+<div id="overlay"
+     class="fixed inset-0 bg-black/60 backdrop-blur-sm
+            opacity-0 pointer-events-none
+            transition duration-300 z-40">
+</div>
+
+<!-- Panel lateral -->
+<div id="mobile-panel"
+     class="fixed top-0 right-0 h-full w-72 bg-[#0B0B0B]
+            border-l border-[#00FF66]/20
+            transform translate-x-full
+            transition-transform duration-300 ease-in-out
+            flex flex-col pt-28 px-6 gap-6 z-50">
+
+  <a href="/" class="mobile-link border border-[#00FF66] px-6 py-3 text-[#00FF66]
+                     text-center uppercase tracking-widest
+                     hover:bg-[#00FF66] hover:text-black transition">
+    Inicio
+  </a>
+
+  <a href="/projects/" class="mobile-link border border-[#00FF66] px-6 py-3 text-[#00FF66]
+                              text-center uppercase tracking-widest
+                              hover:bg-[#00FF66] hover:text-black transition">
+    Proyectos
+  </a>
+
+  <a href="/about/" class="mobile-link border border-[#00FF66] px-6 py-3 text-[#00FF66]
+      text-center uppercase tracking-widest
+      hover:bg-[#00FF66] hover:text-black transition">
+    Sobre mí
+  </a>
+
+</div>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const panel = document.getElementById('mobile-panel');
+  const overlay = document.getElementById('overlay');
+  const links = document.querySelectorAll('.mobile-link');
+
+  if (!btn) throw new Error('Menu button not found');
+
+  const line1 = btn.querySelector('.line1');
+  const line2 = btn.querySelector('.line2');
+  const line3 = btn.querySelector('.line3');
+
+  function toggleMenu() {
+    panel!.classList.toggle('translate-x-full');
+    overlay!.classList.toggle('opacity-0');
+    overlay!.classList.toggle('pointer-events-none');
+
+    // Animación hamburguesa → X
+    line1!.classList.toggle('rotate-45');
+    line1!.classList.toggle('translate-y-0');
+    line1!.classList.toggle('translate-y-[-6px]');
+
+    line2!.classList.toggle('opacity-0');
+
+    line3!.classList.toggle('-rotate-45');
+    line3!.classList.toggle('translate-y-[6px]');
+  }
+
+  btn.addEventListener('click', toggleMenu);
+  overlay!.addEventListener('click', toggleMenu);
+  links.forEach(link => link.addEventListener('click', toggleMenu));
+</script>
 
 
 <style>
 	header {
 		font-family: 'onest', sans-serif;
-        background-color: rgba(11,11,11, 0.9);
-        color: #26ff00;
+    background-color: rgba(11,11,11, 0.5);
+    color: #26ff00;
 	}
-    a {
-        font-size: 15px;
-    }
-    h1 {
-        font-family: 'orbitron', sans-serif;
-    }
+  a {
+      font-size: 15px;
+      font-family: 'orbitron', sans-serif;
+  }
+  h1 {
+      font-family: 'orbitron', sans-serif;
+  }
 </style>
 
 
